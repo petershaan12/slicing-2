@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <nav className="py-10">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-10">
         <div className="flex items-center">
           <div className="w-2/12 flex items-center">
             <div className="w-10 h-10 bg-gray-500 rounded flex items-center justify-center mr-4 shadow-2xl">
@@ -84,9 +84,9 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <div className="w-2/12">
+          <div className="w-3/12">
             <input
-              className="bg-gray-700 px-6 py-4 w-full rounded-full bg-search pl-12"
+              className="bg-gray-700 px-6 py-3 w-full rounded-full bg-search pl-12"
               type="text"
               placeholder="Search...."
             />

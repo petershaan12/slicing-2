@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import { Patrick_Hand } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +20,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${patrick_hand.className}`}> {children} </body>
+      <body
+        className={`${patrick_hand.className} bg-gradient-to-b from-gray-600 to-gray-900 min-h-screen text-white`}
+      >
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
