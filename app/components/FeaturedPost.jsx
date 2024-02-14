@@ -1,17 +1,20 @@
 import Image from "next/image";
+import Link from "next/link";
 import InfoPost from "./InfoPost";
 export default function FeaturedPost() {
   return (
     <article>
-      <div className="flex -mx-4 items-center flex-wrap">
+      <div className="flex -mx-4 items-start lg:items-center flex-wrap">
         <div className="px-4 lg:w-8/12 md:w-7/12">
-          <Image
-            src="/featured-thumbnail.png"
-            width={500}
-            height={500}
-            alt=""
-            className="rounded-xl w-full"
-          />
+          <Link href="/detail">
+            <Image
+              src="/featured-thumbnail.png"
+              width={500}
+              height={500}
+              alt=""
+              className="rounded-xl w-full mb-4 md:mb-0 "
+            />
+          </Link>
         </div>
         <div className="lg:w-4/12 md:w-5/12 w-full px-4">
           <InfoPost
@@ -25,6 +28,7 @@ export default function FeaturedPost() {
           />
         </div>
       </div>
+      <hr className="border-white/10 mt-10" />
     </article>
   );
 }
